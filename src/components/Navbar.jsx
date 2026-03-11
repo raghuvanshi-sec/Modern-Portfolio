@@ -32,7 +32,8 @@ const Navbar = () => {
         <li><a href="#experience">Experience</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="https://satyamraghuvanshi-portfolio.netlify.app" target="_blank" rel="noreferrer" className="nav-resume">Portfolio ↗</a></li>
+        <li><a href="/resume.pdf" target="_blank" rel="noreferrer" className="nav-resume">Resume ↗</a></li>
+        <li><a href="https://satyamraghuvanshi-portfolio.netlify.app" target="_blank" rel="noreferrer" className="nav-links-secondary">Portfolio</a></li>
       </ul>
     </motion.nav>
   );
