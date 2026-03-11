@@ -2,7 +2,7 @@
 
 A sleek, premium, and highly interactive personal portfolio website built with **React**, **Vite**, **Framer Motion**, and **Three.js**. Designed natively with a high-tech cybersecurity aesthetic, featuring an embedded cinematic 3D scrolling experience and dynamic GitHub integration.
 
-![Portfolio Preview](./public/projects/portfolio_project_image.png)
+![Portfolio Preview](./public/projects/modern_portfolio_ui.png)
 
 ## ✨ Features
 
