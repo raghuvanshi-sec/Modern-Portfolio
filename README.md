@@ -27,8 +27,11 @@ A sleek, premium, and highly interactive personal portfolio website built with *
 To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
+
 Make sure you have Node.js and npm installed on your machine.
-* npm
+
+- npm
+
   ```sh
   npm install npm@latest -g
   ```
@@ -36,18 +39,25 @@ Make sure you have Node.js and npm installed on your machine.
 ### Installation
 
 1. Clone the repository
+
    ```sh
    git clone https://github.com/raghuvanshi-sec/Modern-Portfolio.git
    ```
+
 2. Navigate to the project directory
+
    ```sh
    cd Modern-Portfolio
    ```
+
 3. Install NPM packages
+
    ```sh
    npm install
    ```
+
 4. Start the development server
+
    ```sh
    npm run dev
    ```
@@ -80,9 +90,11 @@ Make sure you have Node.js and npm installed on your machine.
 ```
 
 ## 🤝 Contributing
+
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/raghuvanshi-sec/Modern-Portfolio/issues).
 
 ## 📝 License
+
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
