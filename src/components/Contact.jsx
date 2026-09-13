@@ -16,7 +16,7 @@ const containerVariants = {
 // Obfuscated phone number: decoded only in the browser.
 // This keeps the raw number out of the static HTML/source.
 const phoneNumber = [
-  43, 57, 53, 48, 52, 57, 52, 57, 52, 51, 56, 52
+  43, 57, 49, 57, 53, 48, 53, 52, 57, 52, 51, 56, 52
 ]
   .map((code) => String.fromCharCode(code))
   .join('');
