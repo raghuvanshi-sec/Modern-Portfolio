@@ -21,12 +21,27 @@ const Work = () => {
   useEffect(() => {
     const fetchRepos = async () => {
       try {
-        const response = await fetch('https://api.github.com/users/raghuvanshi-sec/repos?sort=updated&per_page=15');
+        const response = await fetch(
+          'https://api.github.com/users/raghuvanshi-sec/repos?sort=updated&per_page=100',
+          {
+            headers: {
+              Accept: 'application/vnd.github+json'
+            }
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error(`GitHub API error: ${response.status}`);
+        }
+
         const data = await response.json();
-        
-        const excludedRepos = ['backend', 'rest', 'my-git-info', 'raghuvanshi-sec'];
-        const filteredData = data.filter(repo => !excludedRepos.includes(repo.name.toLowerCase()));
-        
+
+        // Only repositories tagged with the "portfolio" topic
+        // are displayed in the portfolio.
+        const featuredRepos = data.filter((repo) =>
+          repo.topics?.some((topic) => topic.toLowerCase() === 'portfolio')
+        );
+
         const imageMap = {
           'cyberquest': '/projects/cyberquest_app_ui.png',
           'formulatebrd': '/projects/formulatebrd_app_ui.png',
@@ -40,19 +55,21 @@ const Work = () => {
           'youtube-music-clone': '/projects/youtube_music_ui.png'
         };
 
-        const formattedRepos = filteredData.map(repo => ({
+        const formattedRepos = featuredRepos.map((repo) => ({
           id: repo.id,
           title: repo.name.replace(/-/g, ' '),
-          sub: repo.description || "No description provided.",
-          tag: repo.language || "Security",
+          sub: repo.description || 'No description provided.',
+          tag: repo.language || 'Security',
           url: repo.html_url,
-          emoji: ["🚀", "⚡", "🛡️", "🔧", "💻", "🔬", "🤖"][Math.floor(Math.random() * 7)],
+          emoji: ['🚀', '⚡', '🛡️', '🔧', '💻', '🔬', '🤖'][
+            Math.floor(Math.random() * 7)
+          ],
           image: imageMap[repo.name.toLowerCase()] || null
         }));
 
         setProjects(formattedRepos);
       } catch (error) {
-        console.error("Error fetching repos:", error);
+        console.error('Error fetching repos:', error);
       } finally {
         setLoading(false);
       }
@@ -65,7 +82,7 @@ const Work = () => {
     <section id="work">
       <div className="section">
         <div className="section-label">Selected Work</div>
-        <motion.h2 
+        <motion.h2
           className="section-heading"
           initial="hidden"
           whileInView="visible"
@@ -77,8 +94,12 @@ const Work = () => {
 
         {loading ? (
           <div style={{ color: 'var(--muted)' }}>Fetching repositories...</div>
+        ) : projects.length === 0 ? (
+          <div style={{ color: 'var(--muted)' }}>
+            No featured projects found. Add the <strong>portfolio</strong> topic to your GitHub repositories.
+          </div>
         ) : (
-          <motion.div 
+          <motion.div
             className="work-grid"
             initial="hidden"
             whileInView="visible"
@@ -86,12 +107,12 @@ const Work = () => {
             variants={containerVariants}
           >
             {projects.map((proj) => (
-              <motion.a 
-                href={proj.url} 
-                target="_blank" 
-                rel="noreferrer" 
-                className="proj-card" 
-                key={proj.id} 
+              <motion.a
+                href={proj.url}
+                target="_blank"
+                rel="noreferrer"
+                className="proj-card"
+                key={proj.id}
                 variants={itemVariants}
                 style={{ textDecoration: 'none', display: 'block' }}
               >
