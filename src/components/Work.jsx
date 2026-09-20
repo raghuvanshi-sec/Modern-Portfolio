@@ -50,6 +50,8 @@ const Work = () => {
           'phishguard': '/projects/phishguard_app_ui.png',
           'phishhunter': '/projects/phishhunter_app_ui.png',
           'portfolio': '/projects/portfolio_project_image.png',
+          'riskora-ai-powered-payment-risk-fraud-decisioning': 'https://raw.githubusercontent.com/raghuvanshi-sec/Riskora-AI-Powered-Payment-Risk-Fraud-Decisioning/main/frontend/public/riskora_hero.jpg',
+          'sentient-retention-engine': 'https://raw.githubusercontent.com/raghuvanshi-sec/Sentient-Retention-Engine/master/frontend/src/assets/landing/work-1.jpg',
           'trustlayer-x': '/projects/trustlayer_app_ui.png',
           'wonderlust': '/projects/wonderlust_app_ui.png',
           'youtube-music-clone': '/projects/youtube_music_ui.png'
