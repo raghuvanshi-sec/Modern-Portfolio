@@ -44,7 +44,7 @@ const About = () => {
                 <div className="stat-label">Internship</div>
               </motion.div>
               <motion.div className="stat-box" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={itemVariants} transition={{ delay: 0.3 }}>
-                <div className="stat-num">7.1</div>
+                <div className="stat-num">7.43</div>
                 <div className="stat-label">CGPA</div>
               </motion.div>
               <motion.div className="stat-box" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={itemVariants} transition={{ delay: 0.4 }}>
