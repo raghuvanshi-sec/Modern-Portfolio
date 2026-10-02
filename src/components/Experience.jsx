@@ -50,7 +50,7 @@ const Experience = () => {
               <div className="exp-title">B.E. — Computer Science &amp; Engineering</div>
               <ul className="exp-bullets">
                 <li>Specializing in cybersecurity, full-stack development, and AI/ML applications.</li>
-                <li>CGPA: 7.1 — actively building projects outside of curriculum to deepen practical skills.</li>
+                <li>CGPA: 7.43 — actively building projects outside of curriculum to deepen practical skills.</li>
                 <li>Developed PhishGuard, CyberQuest, Wonderlust, and FormulateBRD as portfolio projects.</li>
               </ul>
               <div className="exp-tags">
